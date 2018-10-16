@@ -1,0 +1,15 @@
+.Card {
+  display: flex;
+  padding: 1.5em;
+  border-style: solid;
+  border-width: 0.5px;
+  flex-direction: column;
+  border-color: lightgrey;
+  margin: 1em;
+  border-radius: 5px;
+}
+.Card:hover {
+  webkit-box-shadow: 4px 7px 22px -4px rgba(0,0,0,0.32);
+  -moz-box-shadow: 4px 7px 22px -4px rgba(0,0,0,0.32);
+  box-shadow: 4px 7px 22px -4px rgba(0,0,0,0.32);
+}
