@@ -1,33 +1,45 @@
 import React, { Component } from 'react';
 import './personList.css';
-import Person from './Person/Person'
+import Person from './Person/Person';
+import Overview from './Overview/Overview';
+import { BrowserRouter } from "react-router-dom";
+import Form from './Form/Form';
 
 class App extends Component {
 // only changes in props and state, forces react to re-render the dom
       state = {
         persons: [
-          { name: "Arnold", age: "14", district: "Amsterdam-Bijlmer"},
-          { name: "Tim", age: "12", district: "Amsterdam-Oost"},
-          { name: "Berry", age: "8", district: "Amsterdam-West"},
-          { name: "Thomas", age: "9", district: "Rivierenbuurt"}
-        ]
+          { name: "Arnold", age: "14", district: "Amsterdam-Bijlmer", id: "0"},
+          { name: "Tim", age: "12", district: "Amsterdam-Oost", id: "1"},
+          { name: "Berry", age: "8", district: "Amsterdam-West", id: "2"},
+          { name: "Thomas", age: "9", district: "Rivierenbuurt", id: "3"}
+        ],
+        currentState: null
       } //this refers to the class
   switchNameHandler = e => {
-    e.preventDefault();
-    console.log('was clicked');
-  }
+    }
+
+  handleStates = (id, name) => {
+    this.setState({
+      currentState: id,
+      currentName: name
+    })
+    console.log(this.state)
+}
   render() {
    let persons = this.state.persons;
    const allPersons = persons.map((person, index) => {
         return (
-        <Person data={person} onClick={this.switchNameHandler.bind(this)} key={index} />
+        <Person data={person} handleStates={this.handleStates} onClick={this.switchNameHandler.bind(this)} key={index} />
       )
     })
     return (
-    <div className="personList">
-      <h1>personen lijst</h1>
-        {allPersons}
-    </div>
+    <BrowserRouter>
+      <div className="personList">
+        <div className="personItems"> {allPersons}</div>
+      <Overview className="overviewList" data={persons} currentState={this.state.currentState} currentName={this.state.currentName}/>
+      </div>
+    </BrowserRouter>
     );
   }
 }

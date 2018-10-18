@@ -1,4 +1,10 @@
 /* Layout */
+.personList {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+}
+
 h3 {
   margin: 0;
 }

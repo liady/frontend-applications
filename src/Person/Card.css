@@ -5,11 +5,14 @@
   border-width: 0.5px;
   flex-direction: column;
   border-color: lightgrey;
-  margin: 1em;
+  margin: 0.5em;
   border-radius: 5px;
 }
-.Card:hover {
+.Card:active {
   webkit-box-shadow: 4px 7px 22px -4px rgba(0,0,0,0.32);
   -moz-box-shadow: 4px 7px 22px -4px rgba(0,0,0,0.32);
   box-shadow: 4px 7px 22px -4px rgba(0,0,0,0.32);
+}
+.personItems {
+  width: 30%;
 }
