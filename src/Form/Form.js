@@ -4,16 +4,47 @@ import json from '../data.json';
 class Form extends Component {
   constructor(props){
     super(props);
-    this.state = {json}
+    this.state = json
   }
 
-  render() {
-    let data = this.state.json;
-  <ul>
-    return {this.props.data.map((vraag)=> {
-      return <Form vraag={vraag}/>
-    })}
-  </ul>
+renderForm = () => {
+  let array = [];
+  array.push(json.map(objectKey => {
+      return (
+        <div>
+          <label>{objectKey.Vraag}</label>
+          <select>
+            {objectKey.Opties.map(test =>  {
+                  console.log(test)
+              return (
+
+                <option value={test.Gewicht}>
+                  {test.Antwoord}
+                </option>
+              )
+            })}
+        </select>
+        </div>
+      )
+    }))
+  return array
+
 }
 
+  render() {
+    return (
+      <div>
+        {this.renderForm()}
+      </div>
+    )
+  }
+}
 export default Form;
+
+
+//
+// const allPersons = persons.map((person, index) => {
+//      return (
+//      <Person data={person} handleStates={this.handleStates} onClick={this.switchNameHandler.bind(this)} key={index} />
+//    )
+//  })

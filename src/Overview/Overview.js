@@ -21,6 +21,7 @@ class Overview extends Component{
       <div className="overview">
         <h1>{this.props.currentName}</h1>
         <Route path="/:person_id" component={PersonItemView} />
+        <Form />
       </div>
     )
   }
