@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import json from '../data.json';
+import category from '../Category/Category'
 
 class Form extends Component {
   constructor(props){
@@ -17,7 +18,6 @@ renderForm = () => {
             {objectKey.Opties.map(test =>  {
                   console.log(test)
               return (
-
                 <option value={test.Gewicht}>
                   {test.Antwoord}
                 </option>
@@ -28,9 +28,7 @@ renderForm = () => {
       )
     }))
   return array
-
 }
-
   render() {
     return (
       <div>

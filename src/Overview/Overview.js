@@ -4,6 +4,7 @@ import PersonItemView from '../PersonItemView/PersonItemView';
 import { Route } from "react-router-dom";
 import Person from '../Person/Person'
 import Form from '../Form/Form'
+import Category from '../Category/Category'
 
 class Overview extends Component{
     constructor(props) {
@@ -19,6 +20,7 @@ class Overview extends Component{
   render(){
     return(
       <div className="overview">
+        <Category />
         <h1>{this.props.currentName}</h1>
         <Route path="/:person_id" component={PersonItemView} />
         <Form />

@@ -1,0 +1,23 @@
+.buttonBar {
+  display: flex;
+  justify-content: center;
+
+}
+ul {
+  display: flex;
+  flex-direction: row;
+
+}
+
+ul li {
+  list-style-type: none;
+  text-decoration: none;
+  justify-content: space-between;
+  margin: 1em;
+
+}
+
+button {
+  border-style: none;
+  padding: 0.5em; 
+}

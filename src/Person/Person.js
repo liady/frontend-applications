@@ -8,7 +8,7 @@ class person extends Component {
   constructor(props) {
   super(props);
     this.state = {
-      id: props.data.id,
+      id: props.data.id,  
       data: props.data,
       name: props.data.name
     }
