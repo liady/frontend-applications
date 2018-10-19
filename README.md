@@ -75,9 +75,10 @@ In day three I started building and exploring some basis concepts of React. I ha
 After that my build went a lot faster. I experimented with passing data and props in this virtual Dom. One thing I am proud of is Routing in my React app.
 
 `App.jss` contains a persons object in the state. This state then gets parsed into the render function. In this render function, `const persons` is fired to map all of the persons into an array and returns a list of persons. The array is then parsed to the `Person.js` component that renders a div. The person component is then called in the `app.js` file. There, it renders a list of `Person` components into the dom.
-This list is rendered between `BrowserRouter` tags.
+This list is rendered between `BrowserRouter` tags. So Routing works in my application. Every Person has its own ID. The rendered person url is equal to the Person's ID. 
 
 In the last week I ran into a lot of problems in my routing and I've found it difficult to parse json data into my app.
+Eventually I succeed in parsing the questions and options in my component.
 
 
 #### Summary   
