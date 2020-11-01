@@ -15,7 +15,7 @@ Open the terminal. Cd into the desired folder and `git clone` this repo.
 `cd`  into the map and type `npm install`.
 This will install all of the dependecies, stated in the `package.json`.
 
-The initial installation is created with `create-react-ap`. This is a great way to get started with a react project. This way you are not required to install or configure tools like Webpack or Babel. The only requirement is that you need to have *Node >= 6* installed on your machine.
+The initial installation is created with `create-react-app`. This is a great way to get started with a react project. This way you are not required to install or configure tools like Webpack or Babel. The only requirement is that you need to have *Node >= 6* installed on your machine.
 After that, you can type
 
 ```
